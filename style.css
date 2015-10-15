@@ -1,0 +1,172 @@
+/* CSS Document */
+
+
+/* ユニバーサル */
+* {padding:0; margin:0; font-size:13px; line-height:1.5; font-weight:normal; font-style:normal; *font-size:small; *font:x-small;}
+
+a:link {color:#2869dd; text-decoration:none;}
+a:visited {color:#2869dd; text-decoration:none;}
+a:hover {color:#002973; text-decoration:underline;}
+a:active {color:#9acce7; text-decoration:line-through;}
+
+table {width:100%; border-collapse:collapse;}
+table td {vertical-align:top;}
+th {background:#37bddb; color:#fff; padding:3px; vertical-align:middle;}
+th a {color:#fff;}
+
+ul {margin:0; padding:0; list-style-type:none; text-align:left;}
+li {margin:0; padding:0; list-style-type:none; list-style-position:outside;}
+
+img {border:0;}
+
+.item {border:1px solid #cccccc;}
+.itemHead {padding:3px 5px; background:#37bddb; color:#ffffff;}
+.itemInfo {text-align:right; padding:3px 5px; background:#efefef;}
+.itemTitle a {font-size:120%; font-weight:bold; font-variant:small-caps; color:#ffffff;}
+.itemPoster {font-size:90%;}
+.itemPostDate {font-size:90%;}
+.itemStats {font-size:90%;}
+.itemBody {padding:10px;}
+.itemText {margin-top:5px; margin-bottom:5px; line-height:1.5;}
+.itemText:first-letter {}
+.itemFoot {text-align:right; padding:3px 5px; background:#efefef;}
+.itemAdminLink {font-size:90%;}
+.itemPermaLink {font-size:90%;}
+
+.outer {border:1px solid silver;}
+.head {background:#37bddb; padding:5px; font-weight:bold;}
+.even {background:#c9e8f0; padding:5px;}
+.odd {background:#d7eef4; padding:5px;}
+tr.even td {background:#c9e8f0; padding:5px;}
+tr.odd td {background:#d7eef4; padding:5px;}
+.foot {background:#c2cdd6; padding:5px; font-weight:bold;}
+
+div.errorMsg {background:#ffcccc; text-align:center; border-top:1px solid #ddddff; border-left:1px solid #ddddff; border-right:1px solid #aaaaaa; border-bottom:1px solid #aaaaaa; font-weight:bold; padding:10px;}
+div.confirmMsg {background:#ddffdf; color:#136c99; text-align:center; border-top:1px solid #ddddff; border-left:1px solid #ddddff; border-right:1px solid #aaaaaa; border-bottom:1px solid #aaaaaa; font-weight:bold; padding:10px;}
+div.resultMsg {background:#cccccc; color:#333333; text-align:center; border-top:1px solid silver; border-left:1px solid silver; font-weight:bold; border-right:1px solid #666666; border-bottom:1px solid #666666; padding:10px;}
+
+div.xoopsCode {background:#ffffff; border:1px inset #000080; padding:0px 6px 6px 6px;}
+div.xoopsQuote {background:#ffffff; border:1px inset #000080; padding:0px 6px 6px 6px;}
+.comTitle {font-weight:bold; margin-bottom:2px;}
+.comText {padding:2px;}
+.comUserStat {font-size:10px; color:#37bddb; font-weight:bold; border:1px solid silver; background:#ffffff; margin:2px; padding:2px;}
+.comUserStatCaption {font-weight:normal;}
+.comUserStatus {margin-left:2px; margin-top:10px; color:#37bddb; font-weight:bold; font-size:10px;}
+.comUserRank {margin:2px;}
+.comUserRankText {font-size:10px; font-weight:bold;}
+.comUserRankImg {border:0px;}
+.comUserName {}
+.comUserImg {margin:2px;}
+.comDate {font-weight:normal; font-style:italic; font-size:smaller;}
+.comDateCaption {font-weight:bold; font-style:normal;}
+
+
+
+/* ボディ */
+body {color:#333; background:#ffffff url(images/bg_body.png) repeat-x fixed; font-size:78%; line-height:1.5; font-family:Verdana, Arial, Helvetica, sans-serif; text-align:center;}
+body.ShowBlockL0R0 #main {width:100%; clear:both;}
+body.ShowBlockL1R0 #main {width:100%; clear:both; margin-right:-195px;}
+body.ShowBlockL0R1 #main {width:100%; clear:both; margin-right:-195px; float:left;}
+body.ShowBlockL1R1 #main {width:100%; clear:both; margin-right:-195px; float:left;}
+
+body.ShowBlockL0R0 #centercolumn {float:left;}
+body.ShowBlockL1R0 #centercolumn {float:right; margin-left:-195px;}
+body.ShowBlockL0R1 #centercolumn {float:left; margin-left:-195px;}
+body.ShowBlockL1R1 #centercolumn {float:right; margin-left:-195px;}
+
+body.ShowBlockL0R0 #mainContents {}
+body.ShowBlockL1R0 #mainContents {margin-left:195px;}
+body.ShowBlockL0R1 #mainContents {margin-left:195px;}
+body.ShowBlockL1R1 #mainContents {margin-left:195px; margin-right:195px;}
+
+
+
+/* キャンバス */
+#canvas {margin:0 auto; padding:0; width:960px; text-align:left; background:#FFF; border: solid 1px #37bddb;}
+
+
+
+/* ヘッダー */
+#header {width:100%; height:250px; color:#666; background:#FFF url(images/bg_header.jpg) no-repeat center top; overflow:hidden;}
+#header .siteTitle {float:left; width:49%;}
+#header .siteTitle h1 {padding:10px 0 0 20px;}
+#header .siteTitle h1 a {font-size:180%; color:#666; text-decoration:none;}
+#header .siteTitle h1 a:hover {color:#000; text-decoration:underline;}
+#header .siteTitle h2 {font-size:110%; padding:0 0 0 20px;}
+
+#header .searchForm {float:right; width:49%;}
+#header .searchForm .form {padding:20px 30px 0 0; text-align:right;}
+#header .searchForm input.field {width:160px; height:25px; border:1px solid #C8C8C8; font-family:verdana,arial,sans-serif; font-size:110%;}
+#header .searchForm input.button {width:120px; height:25px; background:#E6E6E6; border:solid 1px #969696; text-align:center; font-family:verdana,arial,sans-serif; color:#969696; font-size:110%;}
+#header .searchForm input.button:hover {cursor:pointer; border:solid 1px #505050; background:#DCDCDC; color:#505050;}
+
+#header .topImage {clear:both; padding:0; margin:0; width:860px; height:150px;}
+
+
+
+/* トップナビ */
+#topNavi {float:left; width:960px; background:#DCDCDC url(images/bg_head_nav.png) repeat-x; color:#4B4B4B; margin-bottom:13px;}
+#topNavi ul {list-style-type:none;}
+#topNavi ul li {float:left; border-right:solid 1px #AFAFAF;}
+#topNavi ul li a {float:left; display:block; height:3em; line-height:3em; padding:0 16px; text-decoration:none; font-weight:bold; color:#646464;}
+#topNavi ul li a:hover {background:#8afff1; color:#333;}
+
+
+
+/* メイン */
+#main {width:100%; float:left;}
+
+
+
+/* センターカラム */
+#centercolumn {width:100%; margin:-10px 0px -5px;}
+#mainContents {clear:both; padding:10px 0px;}
+#centerC {width:100%;}
+#centerC .blockTitle {border-bottom:#CCC solid 1px; padding: 10px 75px; color:#fff; background:#37bddb url(images/bg_centercolumn.png) no-repeat 0% 50%;}
+#centerC .blockContent {padding:5px 10px; margin-bottom:20px;}
+#centerL {float:left; width:49%;}
+#centerL .blockTitle {padding:5px 10px; color:#fff; background: #37bddb;}
+#centerL .blockContent {padding:5px 10px; margin-bottom:20px; background: #def9ff;}
+#centerR {float:right; width:49%;}
+#centerR .blockTitle {padding:5px 10px; color:#fff; background: #37bddb;}
+#centerR .blockContent {padding:5px 10px; margin-bottom:20px; background: #def9ff;}
+
+
+
+/* レフトカラム */
+#leftcolumn {float:left; width:180px; background:#def9ff;}
+#leftcolumn .blockTitle {margin:0 0 5px 0; padding:5px 10px; color:#FFF; background:#37bddb;}
+#leftcolumn .blockContent {text-align:left; padding:0 10px 10px;}
+
+
+
+/* ライトカラム */
+#rightcolumn {float:right; width:180px; background:#def9ff;}
+#rightcolumn .blockTitle {margin:0 0 5px 0; padding:5px 10px; color:#FFF; background:#37bddb;}
+#rightcolumn .blockContent {text-align:left; padding:0 10px 10px;}
+
+
+
+/* コンテンツ */
+#contents {clear:both;}
+
+
+
+/* フッター */
+#footer {clear: both; color:#fff; background:#37bddb; margin:0 auto; width:960px;}
+#footer p {text-align:center; padding:8px 0;}
+#footer a{
+    color:#fff;
+}
+#footer_menu ul{
+    text-align:center;
+    padding:5px;
+}
+#footer_menu li{
+    display:inline;
+    margin:0px 0px;
+    padding:0px 10px;
+    border-left:1px solid #fff;
+    border-right:1px solid #fff;
+    
+}

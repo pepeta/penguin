@@ -1,0 +1,161 @@
+<{php}>
+$headMenuList = $this->get_template_vars('headMenuList');
+if(is_null($headMenuList)){
+        $headMenuList = array();
+        $headMenuList[] = array('url'=> XOOPS_URL.'/modules/bulletin/', 'text'=> 'お知らせ');
+        $headMenuList[] = array('url'=> XOOPS_URL.'/modules/d3blog/', 'text'=> 'ブログ');
+        $headMenuList[] = array('url'=> XOOPS_URL.'/modules/d3downloads/', 'text'=> 'ダウンロード');
+        $headMenuList[] = array('url'=> XOOPS_URL.'/modules/d3forum/', 'text'=> 'フォーラム');
+        $headMenuList[] = array('url'=> XOOPS_URL.'/modules/cubookmarken/', 'text'=> 'お気に入り');
+        $this->assign('headMenuList', $headMenuList);
+}
+<{/php}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+  <meta name="robots" content="<{$xoops_meta_robots}>" />
+  <meta name="keywords" content="<{$xoops_meta_keywords}>" />
+  <meta name="description" content="<{$xoops_meta_description}>" />
+  <meta name="rating" content="<{$xoops_meta_rating}>" />
+  <meta name="author" content="<{$xoops_meta_author}>" />
+  <meta name="copyright" content="<{$xoops_meta_copyright}>" />
+  <meta name="generator" content="XOOPS Cube" />
+  <link rel="shortcut icon" href="<{$xoops_url}>/favicon.ico" />
+  <link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+  <title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+  <!-- RMV: added module header -->
+  <{$xoops_module_header}>
+  <script type="text/javascript">
+   <!--
+   <{$xoops_js}>
+   // -->
+  </script>
+</head>
+
+
+
+<body class="ShowBlockL<{$xoops_showlblock}>R<{$xoops_showrblock}>">
+  <div id="canvas">
+
+
+
+<div id="header">
+
+  <div class="siteTitle">
+    <h1><a href="<{$xoops_url}>/"><{$xoops_sitename}></a></h1>
+    <h2><{$xoops_slogan}></h2>
+  </div>
+
+  <div class="searchForm">
+    <form action="<{$xoops_url}>/search.php" method="get" class="form">
+      <input type="text" name="query" class="field" />
+      <input type="hidden" name="action" value="results" />
+      <input type="submit" value="検索するペン！" class="button" />
+    </form>
+  </div>
+
+</div>
+
+
+
+<div id="topNavi">
+  <ul>
+    <{foreach from=$headMenuList item=menu name=menu}>
+    <{if $smarty.foreach.menu.last}>
+    <li class="last"><a href="<{$menu.url}>"><{$menu.text}></a></li>
+    <{else}>
+    <li><a href="<{$menu.url}>"><{$menu.text}></a></li>
+    <{/if}>
+    <{/foreach}>
+          
+  </ul>
+</div>
+
+
+
+    <div id="main">
+
+<div id="centercolumn">
+  <div id="mainContents">
+    <{if $xoops_showcblock}>
+      <{if $xoops_ccblocks}>
+        <div id="centerC">
+          <{foreach item=block from=$xoops_ccblocks}>
+            <h2 class="blockTitle"><{$block.title}></h2>
+            <div class="blockContent"><{$block.content}></div>
+          <{/foreach}>
+        </div>
+      <{/if}>
+      <{if $xoops_clblocks}>
+        <div id="centerL">
+          <{foreach item=block from=$xoops_clblocks}>
+            <h2 class="blockTitle"><{$block.title}></h2>
+            <div class="blockContent"><{$block.content}></div>
+          <{/foreach}>
+        </div>
+      <{/if}>
+      <{if $xoops_crblocks}>
+        <div id="centerR">
+          <{foreach item=block from=$xoops_crblocks}>
+            <h2 class="blockTitle"><{$block.title}></h2>
+            <div class="blockContent"><{$block.content}></div>
+          <{/foreach}>
+        </div>
+      <{/if}>
+    <{/if}>
+    <{if $xoops_contents}>
+      <div id="contents">
+        <{$xoops_contents}>
+      </div>
+    <{/if}>
+  </div>
+</div>
+
+<{if $xoops_showlblock}>
+  <div id="leftcolumn">
+    <{foreach item=block from=$xoops_lblocks}>
+      <h2 class="blockTitle"><{$block.title}></h2>
+      <div class="blockContent"><{$block.content}></div>
+    <{/foreach}>
+  </div>
+<{/if}>
+
+    </div>
+
+<{if $xoops_showrblock}>
+  <div id="rightcolumn">
+    <{foreach item=block from=$xoops_rblocks}>
+      <h2 class="blockTitle"><{$block.title}></h2>
+      <div class="blockContent"><{$block.content}></div>
+    <{/foreach}>
+  </div>
+<{/if}>
+
+
+
+<div id="footer">
+        <div id="footer_menu" class="clearfix">
+                <ul>
+                          <{foreach from=$footMenuList item=menu name=foo}>
+        			<{if $smarty.foreach.foo.first}>
+                                  <li><a href="<{$menu.url}>"><{$menu.text}></a></li>
+				<{else}>
+                                  <li><a href="<{$menu.url}>"><{$menu.text}></a></li>
+        			<{/if}>
+                          <{/foreach}>
+                  </ul>
+        </div>
+        
+        <p><{$xoops_footer}></p>
+</div>
+
+
+
+  </div>
+</body>
+</html>
